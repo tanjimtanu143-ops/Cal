@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --bg-main: #111827; /* bg-gray-900 */
+        --bg-calculator: #000000;
+        --bg-display: #000000;
+        --text-display: #ffffff;
+        --bg-btn-default: #374151; /* bg-gray-700 */
+        --bg-btn-default-hover: #4b5563; /* bg-gray-600 */
+        --text-btn-default: #ffffff;
+        --bg-btn-operator: #f97316; /* bg-orange-500 */
+        --bg-btn-operator-hover: #ea580c; /* bg-orange-600 */
+        --text-btn-operator: #ffffff;
+        --bg-btn-special: #d1d5db; /* bg-gray-300 */
+        --bg-btn-special-hover: #9ca3af; /* bg-gray-400 */
+        --text-btn-special: #000000;
+      }
+
+      .theme-light {
+        --bg-main: #f3f4f6; /* bg-gray-100 */
+        --bg-calculator: #ffffff;
+        --bg-display: #ffffff;
+        --text-display: #000000;
+        --bg-btn-default: #e5e7eb; /* bg-gray-200 */
+        --bg-btn-default-hover: #d1d5db; /* bg-gray-300 */
+        --text-btn-default: #000000;
+        --bg-btn-operator: #f97316;
+        --bg-btn-operator-hover: #fb923c; /* orange-400 */
+        --text-btn-operator: #ffffff;
+        --bg-btn-special: #9ca3af; /* bg-gray-400 */
+        --bg-btn-special-hover: #6b7280; /* bg-gray-500 */
+        --text-btn-special: #ffffff;
+      }
+      
+      .theme-ocean {
+        --bg-main: #0c4a6e; /* sky-900 */
+        --bg-calculator: #075985; /* sky-800 */
+        --bg-display: #075985;
+        --text-display: #ffffff;
+        --bg-btn-default: #0284c7; /* sky-600 */
+        --bg-btn-default-hover: #38bdf8; /* sky-400 */
+        --text-btn-default: #ffffff;
+        --bg-btn-operator: #fbbf24; /* amber-400 */
+        --bg-btn-operator-hover: #fcd34d; /* amber-300 */
+        --text-btn-operator: #000000;
+        --bg-btn-special: #7dd3fc; /* sky-300 */
+        --bg-btn-special-hover: #e0f2fe; /* sky-100 */
+        --text-btn-special: #0c4a6e;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'main': 'var(--bg-main)',
+            'calculator': 'var(--bg-calculator)',
+            'display': 'var(--bg-display)',
+            'display-text': 'var(--text-display)',
+            'btn-default': 'var(--bg-btn-default)',
+            'btn-default-hover': 'var(--bg-btn-default-hover)',
+            'btn-default-text': 'var(--text-btn-default)',
+            'btn-operator': 'var(--bg-btn-operator)',
+            'btn-operator-hover': 'var(--bg-btn-operator-hover)',
+            'btn-operator-text': 'var(--text-btn-operator)',
+            'btn-special': 'var(--bg-btn-special)',
+            'btn-special-hover': 'var(--bg-btn-special-hover)',
+            'btn-special-text': 'var(--text-btn-special)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
